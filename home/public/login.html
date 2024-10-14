@@ -14,14 +14,14 @@
             <form>
                 <div class="input-form">
                     
-                    <input type="text" id="username" class="input-field"placeholder="Username" autocomplete="off" required>
+                    <input type="text" id="username" class="input-field"placeholder="Username" autocomplete="off" required onkeyup="loginByEnter()">
                 </div>
                 <div class="input-form">
                     
-                    <input type="password" id="password" class="input-field"placeholder="Password"autocomplete="off" required>
+                    <input type="password" id="password" class="input-field"placeholder="Password"autocomplete="off" required onkeyup="loginByEnter()">
                 </div>
                 <div class="input-submit">
-                    <button class="submit-btn" id="submit"></button>
+                    <button class="submit-btn" id="submit" onclick="login()"></button>
                     <label for="submit">Sign In</label>
                 </div>
                 <div class="sign-up-link">
@@ -30,5 +30,6 @@
             </form>
         </div>
     </div>
+    <script src="/static/login.js"></script>
 </body>
 </html>
