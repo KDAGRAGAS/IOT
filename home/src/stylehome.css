@@ -21,20 +21,24 @@ body {
 }
 
 .container {
+    width: 1500px;
     position: relative;
     width: 100%;
+    background-color:#DFDFDF;
 }
 
 .navigation {
     position: fixed;
-    width: 300px;
+    width: 200px;
     height: 100%;
     background: var(--blue);
     border-left: 10px solid var(--blue);
     transition: 0.5s;
     overflow: hidden;
 }
-
+.navigation.active {
+    width: 80px;
+}
 .navigation ul {
     position: absolute;
     top: 0;
@@ -95,13 +99,17 @@ body {
 /* main */
 .main {
     position: absolute;
-    width:  calc(100%-300px);
-    left: 300px;
+    width:  1150px;
+    left: 200px;
     min-height: 100vh;
-    background-color: var(--white);
+    background-color: var(--grey);
     transition: 0.5s;
 }
-
+.main.active
+{
+    width: 1240px;
+    left: 90px;
+}
 .topbar {
     position: relative;
     width: 100%;
@@ -141,4 +149,227 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.card-box
+{   position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,0.8fr);
+    grid-gap:30px
+}
+
+.card-box .card
+{
+    position: relative;
+    background: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+
+}
+
+.card-box .card .numbers
+{
+    position: relative;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: var(--blue);
+}
+
+.card-box .card .card-name
+{
+    color: var(--black1);
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.card-box .card .icon
+{
+    font-size: 3.5em;
+    color: var(--black2);
+}
+
+.card-box .card:hover
+{
+    background: var(--blue);
+}
+
+.card-box .card:hover .numbers, 
+.card-box .card:hover .card-box,
+.card-box .card:hover .icon
+{
+    color: var(--white);
+}
+
+/* chart-box */
+.chart-box
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-gap: 30px;
+    margin-top: 10px;
+}
+.chart-box .chart
+{
+    position: relative;
+    display: grid;
+    min-height: 400px;
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+.chart-box .remote
+{
+    position: relative;
+    display: grid;
+    min-height: 400px;
+    background: var(--white);
+    padding: 10px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    border-radius: 20px;
+}
+.switch1
+{
+    display: relative;
+
+}
+.switch1 .switchname {
+    position: absolute;
+    top: 30px;
+    left: 20px;
+    color: var(--black1);
+    font-size: 1.1em;
+}
+
+.switch1 .switch1-btn
+{   
+    position: absolute;
+    top: 10px;
+    left: 100px;
+    background-color: var(--black2);
+    width: 100px;
+    height: 50px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.switch1-btn::before
+{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+#check:checked + .switch1-btn{
+    background-color: var(--blue);
+}
+#check:checked + .switch1-btn::before{
+    transform: translateX(50px);
+}
+input{
+    display: none;
+}
+
+/* switch-2 */
+
+.switch2
+{
+    display: relative;
+
+}
+
+.switch2 .switchname {
+    position: absolute;
+    top: 135px;
+    left: 20px;
+    color: var(--black1);
+    font-size: 1.1em;
+}
+
+.switch2 .switch2-btn
+{   
+    position: absolute;
+    top: 120px;
+    left: 100px;
+    background-color: var(--black2);
+    width: 100px;
+    height: 50px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.switch2-btn::before
+{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+#check2:checked + .switch2-btn{
+    background-color: var(--blue);
+}
+#check2:checked + .switch2-btn::before{
+    transform: translateX(50px);
+}
+/* switch3 */
+.switch3 .switchname {
+    position: absolute;
+    top: 250px;
+    left: 20px;
+    color: var(--black1);
+    font-size: 1.1em;
+}
+
+.switch3 .name2 {
+    position: absolute;
+    top: 250px;
+    left: 210px;
+    color: var(--black1);
+    font-size: 1.1em;
+}
+
+.switch3 .switch3-btn
+{   
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    background-color: var(--black2);
+    width: 100px;
+    height: 50px;
+    border-radius: 200px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.switch3-btn::before
+{
+    position: absolute;
+    content: '';
+    background-color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 200px;
+    margin: 5px;
+    transition: 0.2s;
+}
+#check3:checked + .switch3-btn{
+    background-color: var(--blue);
+}
+#check3:checked + .switch3-btn::before{
+    transform: translateX(50px);
 }

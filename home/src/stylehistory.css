@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+:root {
+    --blue: #287bff;
+    --white: #fff;
+    --grey: #f5f5f5;
+    --black1: #222;
+    --black2: #999;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 1500px;
+    position: relative;
+    width: 100%;
+    background-color:#DFDFDF;
+}
+
+.navigation {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: var(--blue);
+    border-left: 10px solid var(--blue);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active {
+    width: 80px;
+}
+.navigation ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 200%;
+    list-style: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+}
+
+.navigation ul li:hover {
+    background: var(--white);
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.navigation ul li:hover a {
+    color: var(--blue);
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.navigation ul li a .icon ion-icon {
+    font-size: 1.75em;
+}
+
+.navigation ul li a .title {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* main */
+.main {
+    position: absolute;
+    width:  1150px;
+    left: 200px;
+    min-height: 100vh;
+    background-color: var(--grey);
+    transition: 0.5s;
+}
+.main.active
+{
+    width: 1240px;
+    left: 90px;
+}
+.topbar {
+    position: relative;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.user {
+    display: flex;
+    position: relative;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.user img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main .secondbar
+{
+
+    margin-top: 5px;
+}
+.secondbar .tablename
+{
+    width: 300px;
+    height: 60px;
+    font-size: 1.1em;
+    padding: 0 10px;
+}
+.thirdbar
+{
+    padding: 0 10px;
+}
+.content_table
+{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 1.2em;
+    min-width: 400px;
+    width: 1100px;
+}
+.content_table thead tr
+{
+    background-color: #009879;
+    color: var(--white);
+    text-align: center;
+    font-weight: bold;
+
+}
+.content_table th,
+.content_table td{
+    padding: 12px 15px;
+}
+.content_table tbody tr{
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+}
+
+.content_table tbody tr:last-of-type
+{
+    border-bottom: 2px solid #009879;
+}
